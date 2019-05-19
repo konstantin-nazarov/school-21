@@ -1,0 +1,1 @@
+nslookup slash16.org | grep Server | rev | cut -f1 | rev

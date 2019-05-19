@@ -1,0 +1,2 @@
+a) ifconfig en0 | grep broadcast | rev | cut -d' ' -f1 | rev
+b) ping -c10 192.168.23.255 | cut -d' ' -f4 | grep '192\.168\.2' | sort | uniq -c | rev | cut -c2- |cut -d' ' -f1 | rev
