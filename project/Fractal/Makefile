@@ -6,43 +6,46 @@
 #    By: dhorker <dhorker@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/03 14:20:08 by dhorker           #+#    #+#              #
-#    Updated: 2019/03/07 17:34:10 by dhorker          ###   ########.fr        #
+#    Updated: 2019/07/01 19:05:22 by dhorker          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# NAME = fdf
+NAME = fractal
 
-# SOURCE = main.c
+WW = -Wall -Wextra -Werror
 
-# OBJ = $(SOURCE:.c=.o)
+MLXFLAG = -lmlx -framework OpenGL -framework AppKit
 
-# HEADERS = fdf.h
+LIB = libft.a
 
-# FLAGS = -Wall -Wextra -Werror
+MLX = minilibx_macos/libmlx.a
 
-# MFLAGS = -lmlx -framework OpenGL -framework AppKit
+FRACTAL = fractals
 
-# LIB = libft/libft.a minilibx_macos/libmlx.a
+SUPPORT = support
 
-# %.o : %.c
-# 	@gcc $(FLAGS) -c $^
+OBJECT =	$(FRACTAL)/mandelbrot.o	$(FRACTAL)/julia.o \
+			$(FRACTAL)/carpet.o		$(FRACTAL)/newton.o \
+			$(FRACTAL)/ship.o \
+			$(SUPPORT)/support_1.o	$(SUPPORT)/support_2.o \
+			$(SUPPORT)/mouse.o	$(SUPPORT)/keyboard.o \
+			$(SUPPORT)/mini_window.o \
+			main.o opencl.o
 
 all: $(NAME)
-	gcc main.c -lmlx -framework OpenGL -framework AppKit  libft/libft.a minilibx_macos/libmlx.a
 
-# $(LIBNAME):
-# 	@make -C libft
+%.o : %.c
+	@gcc $(WWW) -I . -c $^ -o $@
 
-# $(NAME): $(LIBNAME) $(OBJ)
-# 	@gcc $(FLAGS) $(MFLAGS) -c $(SOURCE)
-# 	@gcc $(FLAGS) $(MFLAGS) $(OBJ) -I $(HEADERS) $(LIB) -o $(NAME)
+$(NAME): $(OBJECT)
+	@gcc $(OBJECT) $(WWW) -framework OpenCL $(MLXFLAG) $(LIB) $(MLX) -I . -o $(NAME)
 
-# clean:
-# 		@rm -f $(OBJ)
-# 		@make clean -C libft
+clean:
+	@rm -rf *.o
+	@rm -rf $(FRACTAL)/*.o
+	@rm -rf $(SUPPORT)/*.o
 
-# fclean: clean
-# 		@make fclean -C libft
-# 		@rm -f $(NAME)
+fclean: clean
+	@rm -rf $(NAME)
 
-# re: fclean all
+re: fclean all
