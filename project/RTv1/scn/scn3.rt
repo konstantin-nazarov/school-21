@@ -1,0 +1,27 @@
+scene
+{
+	cam_pos(0 0 -250)
+	cam_dir(0 0 1)
+}
+
+content
+{
+	object(light)
+	{
+		rgb(255 255 255)
+		pos(0 50 -50)
+	}
+	object(cone)
+	{
+		rgb(255 255 0)
+		pos(0 40 0)
+		rot(0 1 0)
+		size(60)
+	}
+	object(plane)
+	{
+		rgb(0 0 255)
+		pos(0 -50 0)
+		rot(0 1 0)
+	}
+}

@@ -1,0 +1,113 @@
+scene
+{
+	cam_pos(0 0 -100)
+	cam_dir(0 0 1)
+}
+
+content
+{
+	object(light)
+	{
+		rgb(255 255 255)
+		pos(-20 10 30)
+	}
+	object(light)
+	{
+		rgb(255 255 255)
+		pos(70 10 81)
+	}
+	object(plane)
+	{
+		rgb(255 60 60)
+		pos(0 -40 0)
+		rot(0 1 0)
+	}
+	object(plane)
+	{
+		rgb(60 255 60)
+		pos(0 50 0)
+		rot(0 -1 0)
+	}
+	object(plane)
+	{
+		rgb(60 60 255)
+		pos(0 0 270)
+		rot(0 0 -1)
+	}
+	object(sphere)
+	{
+		rgb(230 126 34)
+		pos(50 -40 50)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(100 100 250)
+		pos(-50 50 50)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(100 250 100)
+		pos(-50 -40 50)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(255 0 0)
+		pos(50 50 50)
+		size(10)
+	}
+	object(cylinder)
+	{
+		rgb(10 150 240)
+		pos(-50 0 50)
+		rot(0 1 0)
+		size(5)
+	}
+	object(cylinder)
+	{
+		rgb(10 150 240)
+		pos(30 0 50)
+		rot(0 1 0)
+		size(5)
+	}
+	object(sphere)
+	{
+		rgb(230 126 34)
+		pos(50 -40 140)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(100 100 250)
+		pos(-50 50 140)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(100 250 100)
+		pos(-50 -40 140)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(255 0 0)
+		pos(50 50 140)
+		size(10)
+	}
+	object(cylinder)
+	{
+		rgb(10 150 240)
+		pos(-50 0 140)
+		rot(0 1 0)
+		size(5)
+	}
+	object(cylinder)
+	{
+		rgb(10 150 240)
+		pos(50 0 140)
+		rot(0 1 0)
+		size(5)
+	}
+}

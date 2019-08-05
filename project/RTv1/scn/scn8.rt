@@ -1,0 +1,79 @@
+scene
+{
+	cam_pos(0 0 -100)
+	cam_dir(0 0 1)
+}
+
+content
+{
+	object(light)
+	{
+		rgb(255 255 255)
+		pos(-20 10 30)
+	}
+	object(light)
+	{
+		rgb(255 255 255)
+		pos(70 10 81)
+	}
+	object(plane)
+	{
+		rgb(255 60 60)
+		pos(0 -40 0)
+		rot(0 1 0)
+	}
+	object(plane)
+	{
+		rgb(60 255 60)
+		pos(0 50 0)
+		rot(0 -1 0)
+	}
+	object(plane)
+	{
+		rgb(60 60 255)
+		pos(0 0 100)
+		rot(0 0 -1)
+	}
+	object(plane)
+	{
+		rgb(100 100 100)
+		pos(-80 0 0)
+		rot(1 0 0)
+	}
+	object(plane)
+	{
+		rgb(100 100 100)
+		pos(80 0 0)
+		rot(-1 0 0)
+	}
+	object(plane)
+	{
+		rgb(100 100 100)
+		pos(0 0 -101)
+		rot(0 0 1)		
+	}
+	object(sphere)
+	{
+		rgb(230 126 34)
+		pos(-70 0 70)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(100 100 250)
+		pos(10 50 60)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(100 250 100)
+		pos(20 -40 50)
+		size(10)
+	}
+	object(sphere)
+	{
+		rgb(255 0 0)
+		pos(-50 -10 100)
+		size(10)
+	}
+}

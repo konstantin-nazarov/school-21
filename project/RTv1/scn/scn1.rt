@@ -1,0 +1,20 @@
+scene
+{
+	cam_pos(0 0 100)
+	cam_dir(0 0 1)
+}
+
+content
+{
+	object(light)
+	{
+		rgb(255 255 255)
+		pos(-100 0 100)
+	}
+	object(sphere)
+	{
+		rgb(255 0 0)
+		pos(0 0 0)
+		size(25)
+	}
+}
