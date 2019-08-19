@@ -24,14 +24,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	start = (char *)haystack;
 	while (len-- && *start)
 	{
-		if (*(start) == needle[i] && i == 0)
+		if (*start == needle[i] && i == 0)
 			str = (char *)start;
-		if (*(start) != needle[i] && i != 0)
+		if (*start != needle[i] && i != 0)
 		{
 			start = ++str;
 			len += i;
 		}
-		i = (*(start) == needle[i]) ? ++i : 0;
+		i = (*start == needle[i]) ? i + 1 : 0;
 		if (needle[i] == '\0')
 			return (str);
 		start++;

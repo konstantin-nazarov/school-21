@@ -15,7 +15,7 @@
 static void		ft_free(void *lst, size_t n)
 {
 	free(lst);
-	n = 0;
+	n++;
 }
 
 t_list			*ft_lstnew(void const *content, size_t content_size)

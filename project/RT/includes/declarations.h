@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   declarations.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dhorker <dhorker@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lyahasik-prog <lyahasik-prog@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/08 18:19:34 by dhorker           #+#    #+#             */
-/*   Updated: 2019/07/28 15:50:34 by dhorker          ###   ########.fr       */
+/*   Updated: 2019/08/16 20:30:19 by lyahasik-pr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,18 @@ t_camera		**create_camera();
 t_light			**create_light();
 t_object		**create_object();
 void			create_scene(t_scene *scene);
-void			create_img(t_scene *scene);
-void			direction_camera(t_scene *scene, double x, double y);
+void			filling_img(t_project *project);
+void			direction_camera(t_project *project, double x, double y);
 
-t_vec3			ray_trace(t_scene scene);
+t_vec3			ray_trace(t_project project);
 double			intersection(t_scene *scene, t_vec3 inter, t_vec3 dir);
 double			create_lighting(t_scene scene, t_vec3 inter, t_vec3 normal);
+
+void			destroy_program(t_project *project);
+void			render_show(t_project *project);
+void			create_window(t_project *project);
+void			catching_events(t_project *project);
+void			import_img(const char *str, t_project *project);
+unsigned char	*create_texture(const char *str, t_sdl_img *img);
 
 #endif

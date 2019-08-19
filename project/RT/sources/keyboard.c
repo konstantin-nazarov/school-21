@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keyboard.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dhorker <dhorker@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lyahasik-prog <lyahasik-prog@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 14:47:09 by dhorker           #+#    #+#             */
-/*   Updated: 2019/07/28 15:30:36 by dhorker          ###   ########.fr       */
+/*   Updated: 2019/08/09 15:40:36 by lyahasik-pr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ int			key_press(int code, t_scene *scene)
 	if (code == 124)
 		scene->camera[0]->pos.x += 10;
 	create_img(scene);
-	mlx_put_image_to_window(scene->mlx, scene->win, scene->img, 0, 0);
+	// mlx_put_image_to_window(scene->mlx, scene->win, scene->img, 0, 0);
 	return (0);
 }
